@@ -398,7 +398,7 @@ module.exports = function (grunt) {
     },
     shell: {
       mocha: {
-        command: 'mocha --compilers coffee:coffee-script/register -R min src/app/**/test/*.coffee',
+        command: 'mocha --compilers coffee:coffee-script/register -R min src/test/**/*.coffee',
         options: {
           failOnError: true
         }
@@ -439,7 +439,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'connect:test',
-    'protractor:e2e',
+    //'protractor:e2e',
     'shell:mocha'
   ]);
 
