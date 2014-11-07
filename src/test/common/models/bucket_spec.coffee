@@ -8,7 +8,5 @@ BucketModel = testSubject.getCall(0).args[1](contributor, authService)
 describe 'BucketModel', ->
   beforeEach ->
     @bucket = new BucketModel({})
-  it 'loads library', ->
-    console.log @bucket
     
 

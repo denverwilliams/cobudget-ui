@@ -398,7 +398,7 @@ module.exports = function (grunt) {
     },
     shell: {
       mocha: {
-        command: 'mocha --compilers coffee:coffee-script/register -R min src/test/**/*_spec.coffee',
+        command: 'mocha --compilers coffee:coffee-script/register -R min src/test/**/*spec.coffee',
         options: {
           failOnError: true
         }
