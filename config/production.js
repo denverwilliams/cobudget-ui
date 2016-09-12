@@ -1,3 +1,3 @@
 module.exports = {
-  apiPrefix: "http://api.ii.org.nz:3000/api/v1"
+  apiPrefix: "http://API_URL:3000/api/v1"
 }
