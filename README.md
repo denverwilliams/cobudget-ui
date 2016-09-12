@@ -1,4 +1,3 @@
-
 # cobudget-ui
 
 [![Code Climate](https://codeclimate.com/github/cobudget/cobudget-ui/badges/gpa.svg)](https://codeclimate.com/github/cobudget/cobudget-ui)
@@ -49,4 +48,16 @@ npm run stage
 ```
 npm run set-remote
 npm run deploy
+```
+
+### Docker RUN
+
+```
+docker run --detach \
+--name cobudget-ui \ 
+--env PORT=8080 \
+--env LIVERELOAD=9000 \
+--env NODE_ENV=production \
+--link cobudget-api:api.ii.org.nz \
+docker.ii.org.nz/ii/cobudget-ui:master
 ```
