@@ -56,7 +56,6 @@ npm run deploy
 docker run --detach \
 --name cobudget-ui \ 
 --env PORT=8080 \
---env LIVERELOAD=9000 \
 --env NODE_ENV=production \
 --env VIRTUAL_PORT=8080,9000 \
 --env VIRTUAL_HOST=cobudget.ii.org.nz
