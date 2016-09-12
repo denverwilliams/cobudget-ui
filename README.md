@@ -54,11 +54,15 @@ npm run deploy
 
 ```
 docker run --detach \
---name cobudget-ui \ 
+--name cobudget-ui \
 --env PORT=8080 \
 --env NODE_ENV=production \
---env VIRTUAL_PORT=8080,9000 \
---env VIRTUAL_HOST=cobudget.ii.org.nz
---link cobudget-api:api.ii.org.nz \
-docker.ii.org.nz/ii/cobudget-ui:master
+--env VIRTUAL_PORT=8080 \
+--env VIRTUAL_HOST=cobudget.ii.org.nz \
+--env NPM_ENV=production \
+--env API_PROTO=http \
+--env API_HOST=api.ii.org.nz \
+--env API_PORT=80 \
+docker.ii.org.nz/ii/cobudget-ui:Docker_updates
+
 ```
