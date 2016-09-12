@@ -8,9 +8,9 @@ WORKDIR /home/cobudget/cobudget-ui
 RUN npm install bower
 RUN npm install
 
-#RUN chmod +x entry.sh
+RUN chmod +x entry.sh
 
-#ENTRYPOINT ["entry.sh"]
+ENTRYPOINT ["/home/cobudget/cobudget-ui/entry.sh"]
 
 EXPOSE 8080
 EXPOSE 9000
