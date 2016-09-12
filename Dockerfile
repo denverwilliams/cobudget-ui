@@ -1,6 +1,5 @@
 FROM node
 
-RUN apt-get update && apt-get -y install vim
 RUN useradd -m -s /bin/bash cobudget
 USER cobudget
 WORKDIR /home/cobudget
