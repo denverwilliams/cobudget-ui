@@ -1,13 +1,16 @@
 FROM node
 
-RUN apt-get update
-RUN apt-get -y install vim 
-RUN apt-get -y install sudo 
 RUN useradd -m -s /bin/bash cobudget
-RUN echo "cobudget ALL=(root) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/cobudget
-WORKDIR /home/cobudget
 USER cobudget
-RUN git clone -b dockerv2 https://gitlab.ii.org.nz/cobudget/cobudget-ui.git
+WORKDIR /home/cobudget
+RUN git clone -b Docker_updates https://gitlab.ii.org.nz/ii/cobudget-ui.git
 WORKDIR /home/cobudget/cobudget-ui
 RUN npm install bower
-RUN npm install 
+RUN npm install
+
+RUN chmod +x entry.sh
+
+ENTRYPOINT ["/home/cobudget/cobudget-ui/entry.sh"]
+
+EXPOSE 8080
+EXPOSE 9000
