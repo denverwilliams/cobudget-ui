@@ -58,10 +58,10 @@ docker run --detach \
 --env PORT=8080 \
 --env NODE_ENV=production \
 --env VIRTUAL_PORT=8080 \
---env VIRTUAL_HOST=cobudget.ii.org.nz \
+--env VIRTUAL_HOST=mydomain.com \ # Nginx Proxy Domain
 --env NPM_ENV=production \
 --env API_PROTO=http \
---env API_HOST=api.ii.org.nz \
+--env API_HOST=mydomain.com \
 --env API_PORT=80 \
 docker.ii.org.nz/ii/cobudget-ui:Docker_updates
 
